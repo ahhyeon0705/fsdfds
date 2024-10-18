@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체질량 계산기</title>
+
+    
+</head>
+<body>
+    <h1>체질량 지수 계산기</h1>
+    체중(kg): <input id="weight">
+    <br>
+    신장(m): <input id="height"> 
+
+    <input type="button" value="계산" onclick="calc();" />
+
+    <button onclick="sub()"> 눌러주세요! </button>
+    <h2 id="test"></h2>
+
+    <h3 id="result"></h3>
+    
+    <script>
+        function calc(){
+    let x = document.getElementById("weight").value;
+    let y = document.getElementById("height").value;
+
+    let bmi = x / (y * y)
+    document.getElementById("result").innerHTML = bmi;
+
+        }
+        function sub(){
+            const name = prompt('이름을 입력해 주세요!');
+            document.getElementById("test").innerHTML = "welcom" + name
+        }
+    
+    //console.log(X)
+    //console.log(y)
+
+    </script>
+    
+</body>
+</html>
